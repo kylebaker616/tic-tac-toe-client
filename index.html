@@ -2,7 +2,7 @@
 <html>
     <head>
       <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width initial-scale=1">
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -12,6 +12,56 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Tic Tac Toe</h1>
+      <div id="login-forms">
+      <em>
+        <h1 id="message"></h1>
+      </em>
+      <h2 id="sign-up-title">Sign Up</h2>
+      <form id="sign-up">
+        <label for="sign-up-email">Email</label>
+        <input type="email" name="credentials[email]" placeholder="Email">
+        <label>Password</label>
+        <input type="password" name="credentials[password]" placeholder="password">
+        <label>Password Confirmation</label>
+        <input type="password" name="credentials[password_confirmation]" placeholder="password">
+        <input type="submit" value="Sign Up">
+      </form>
+      <br>
+      <p id="sign-in-title">Or Sign In</p>
+      <form id="sign-in">
+        <label for="sign-in-email">Email</label>
+        <input type="email" name="credentials[email]" placeholder="Email">
+        <label>Password</label>
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input type="submit" value="Sign In">
+      </form>
+      <button id="sign-out" type="button">
+        Sign Out
+      </button>
+      <button id="new-game" type="button">
+        New Game
+      </button>
+      <div class="status"></div>
+    </div>
+
+      <div class="container">
+              <div class="row" id="row1">
+                <div class="col-4 game-square">
+                  <button id="cell0"></button></div>
+                <div class="col-4 game-square"><button id="cell1"></button></div>
+                <div class="col-4 game-square"><button id="cell2"></button></div>
+              </div>
+              <div class="row" id="row2">
+                <div class="col-4 game-square"> <button id="cell3"></button></div>
+                <div class="col-4 game-square"><button id="cell4"></button></div>
+                <div class="col-4 game-square"><button id="cell5"></button></div>
+              </div>
+              <div class="row" id="row3">
+                <div class="col-4 game-square"> <button id="cell6"></button></div>
+                <div class="col-4 game-square"><button id="cell7"></button></div>
+                <div class="col-4 game-square"><button id="cell8"></button></div>
+              </div>
+            </div>
     </body>
 </html>
