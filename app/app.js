@@ -12,9 +12,14 @@ $(() => {
   $('#new-game').on('click', authEvents.onNewGame)
   $('#sign-out').hide()
   $('.container').hide()
-  $('button').on('click', authEvents.onCellClick)
+  $('.game-cell').on('click', authEvents.onCellClick)
 })
 const initialBoard = $('.status')
 let gamePlay = true
 let player = 'X'
 let cells = ['', '', '', '', '', '', '', '', '', ]
+
+
+// $('.game-cell').each() {
+
+// }

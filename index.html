@@ -3,6 +3,9 @@
     <head>
       <title>Example</title>
       <meta name="viewport" content="width=device-width initial-scale=1">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+      </style>
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -43,24 +46,25 @@
         New Game
       </button>
       <div class="status"></div>
+      <!-- <button class="reset"></button> -->
     </div>
 
       <div class="container">
               <div class="row" id="row1">
-                <div class="col-4 game-square">
-                  <button id="cell0"></button></div>
-                <div class="col-4 game-square"><button id="cell1"></button></div>
-                <div class="col-4 game-square"><button id="cell2"></button></div>
+                <div class="col-4 ">
+                  <button class="game-cell" id="cell0"></button></div>
+                <div class="col-4 "><button  class="game-cell" id="cell1"></button></div>
+                <div class="col-4 "><button class="game-cell" id="cell2"></button></div>
               </div>
               <div class="row" id="row2">
-                <div class="col-4 game-square"> <button id="cell3"></button></div>
-                <div class="col-4 game-square"><button id="cell4"></button></div>
-                <div class="col-4 game-square"><button id="cell5"></button></div>
+                <div class="col-4 "> <button  class="game-cell" id="cell3"></button></div>
+                <div class="col-4 "><button class="game-cell" id="cell4"></button></div>
+                <div class="col-4 "><button class="game-cell" id="cell5"></button></div>
               </div>
               <div class="row" id="row3">
-                <div class="col-4 game-square"> <button id="cell6"></button></div>
-                <div class="col-4 game-square"><button id="cell7"></button></div>
-                <div class="col-4 game-square"><button id="cell8"></button></div>
+                <div class="col-4 "> <button class="game-cell" id="cell6"></button></div>
+                <div class="col-4 "><button class="game-cell" id="cell7"></button></div>
+                <div class="col-4 "><button class="game-cell" id="cell8"></button></div>
               </div>
             </div>
     </body>

@@ -33,17 +33,41 @@ const onSignOut = function () {
 const onNewGame = function (event) {
   event.preventDefault()
   $('.container').show()
+  api.newGame()
 }
 
-const onCellClick = function () {
-  let turn = 1
-  if(turn === 1) {
-    $('#status').text('It Is Player Ones Turn')
+const onCellClick = function (event) {
+  console.log('clicked')
+  // console.log(event.target.id)
+  const box = event.target.id
+  console.log(box)
+  const cellStatus = event.target.classList
+  if (cellStatus[1]=== 'x' || cellStatus[1]=== 'o') {
+    return null
   }
+  if (xTurn === true) {
+    cellStatus.add('x')
+    xTurn = !xTurn
+  } else {
+    cellStatus.add('o')
+    xTurn = !xTurn
+  }
+  $(event.target).text(cellStatus[1])
+  // const status = $('.status')
+  // const cells = $('.game-cell')
+  // const reset = $('.reset')
+  // console.log(cells)
+  // let gamePlay = true
+  // let xTurn= true
+
+
+
 }
+let xTurn= true
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onNewGame
+  onNewGame,
+  onCellClick
 }
