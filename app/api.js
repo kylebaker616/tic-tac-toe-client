@@ -37,10 +37,24 @@ const newGame = function () {
     }
   })
 }
+
+const cellClick = function (game) {
+  console.log('in update api')
+  console.log(game)
+  return $.ajax({
+    url: 'https://tic-tac-toe-api-development.herokuapp.com/games/' + store.id,
+    method: 'PATCH',
+    headers: { Authorization: 'Bearer ' + store.token },
+    data: game
+  })
+}
+
+
+
 module.exports = {
   signUp,
   signIn,
   signOut,
-  newGame
-
+  newGame,
+  cellClick
 }

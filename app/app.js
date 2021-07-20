@@ -14,12 +14,18 @@ $(() => {
   $('.container').hide()
   $('.game-cell').on('click', authEvents.onCellClick)
 })
-const initialBoard = $('.status')
-let gamePlay = true
-let player = 'X'
-let cells = ['', '', '', '', '', '', '', '', '', ]
-
-
-// $('.game-cell').each() {
-
-// }
+// const initialBoard = $('.status')
+// let gamePlay = true
+// let player = 'X'
+// const gameStatus = function () {
+//     const zero = cells[0].classList[1]
+//     const one = cells[1].classList[1]
+//     const two = cells[2].classList[1]
+//     const three = cells[3].classList[1]
+//     const four = cells[4].classList[1]
+//     const five = cells[5].classList[1]
+//     const six = cells[6].classList[1]
+//     const seven = cells[7].classList[1]
+//     const eight = cells[8].classList[1]
+//   console.log (zero, one, two)
+//   }

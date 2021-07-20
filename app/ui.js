@@ -23,6 +23,7 @@ const onSignInSuccess = function (response) {
   $('#sign-in-title').hide()
   $('#sign-up-title').hide()
   // $('#change-password').show()
+
 }
 
 const onSignInFailure = function (response) {
@@ -46,11 +47,15 @@ const onSignOutFailure = function (response) {
   $('#message').text('Sign Out Failed')
 }
 
+const onNewGameSuccess = function (response) {
+  store.id = response.game._id
+}
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
   onSignInFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onNewGameSuccess
 }
