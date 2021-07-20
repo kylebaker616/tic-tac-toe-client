@@ -49,8 +49,6 @@ const cellClick = function (game) {
   })
 }
 
-
-
 module.exports = {
   signUp,
   signIn,

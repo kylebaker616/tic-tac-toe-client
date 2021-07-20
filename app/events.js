@@ -34,6 +34,9 @@ const onSignOut = function () {
 const onNewGame = function (event) {
   event.preventDefault()
   $('.container').show()
+  $('.game-cell').removeClass('x')
+  $('.game-cell').removeClass('o')
+  $('.game-cell').empty()
   api.newGame()
     .then(ui.onNewGameSuccess)
     .catch(ui.onNewGameFailure)
