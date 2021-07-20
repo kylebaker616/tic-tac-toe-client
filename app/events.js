@@ -37,6 +37,7 @@ const onNewGame = function (event) {
   $('.game-cell').removeClass('x')
   $('.game-cell').removeClass('o')
   $('.game-cell').empty()
+  gamePlay = true
   api.newGame()
     .then(ui.onNewGameSuccess)
     .catch(ui.onNewGameFailure)
