@@ -58,13 +58,13 @@ const onNewGameSuccess = function (response) {
   $('#sign-out1').show()
 }
 const onNewGameFailure = function () {
-  ('#message').text('Sorry, something went wrong')
+  $('#message').text('Sorry, something went wrong')
 }
 const onCellClickSuccess = function () {
   console.log('in then')
 }
 const onCellClickFailure = function () {
-  '#message'.text('Sorry, something went wrong')
+  $('#message').text('Sorry, something went wrong')
 }
 module.exports = {
   onSignUpSuccess,

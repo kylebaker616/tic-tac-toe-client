@@ -88,8 +88,7 @@ const gameStatus = function () {
   } else if (zero && one && two && three && four && five && six && seven && eight) {
     gamePlay = false
     $('.status').text('It is a tie!')
-  }
-  else {
+  } else {
     xTurn = !xTurn
     if (xTurn) {
       $('.status').text('X is next')
@@ -109,13 +108,12 @@ const onCellClick = function (event) {
     return null
   }
   if (xTurn === true) {
-    cellStatus.add('x')
+    $(event.target).addClass('x')
     gameStatus()
     // xTurn = !xTurn
   } else {
-    cellStatus.add('o')
+    $(event.target).addClass('o')
     gameStatus()
-    // xTurn = !xTurn
   }
   $(event.target).text(cellStatus[1])
   store.cellIndex = $(event.target).data('cell-index')
@@ -128,7 +126,6 @@ const onCellClick = function (event) {
       over: !gamePlay
     }
   }
-
 
   api.cellClick(game)
     .then(ui.onCellClickSuccess)
