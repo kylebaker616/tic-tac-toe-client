@@ -41,6 +41,7 @@ const onSignOutSuccess = function (response) {
   $('.new-game1').hide()
   $('#button1').show()
   $('#message').delay(3000).hide(500)
+  $('.status').hide(500)
   // $('.status').delay(5000).fadeOut(500)
 }
 
