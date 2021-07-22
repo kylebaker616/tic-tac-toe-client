@@ -7,7 +7,7 @@ This app is a simple front end tic tac toe game that sends user and game data to
 [Deployed Client](https://kylebaker616.github.io/tic-tac-toe-client/)
 
 ## User Story
-https://imgur.com/a/TYvaAp7
+
 As a user I want to be able to create an account.
 As a user I want to be able to sign into my account
 As a user I want to be able to start a game
