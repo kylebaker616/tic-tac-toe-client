@@ -12,11 +12,15 @@ h1 {
   display: grid;
   justify-content: center;
   color:#1f70c1;
-
+}
 .status {
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: #1f70c1;
 }
+.top-button {
+  width: 40vw;
 }
 
 .form-modal{
