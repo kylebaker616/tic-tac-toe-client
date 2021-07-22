@@ -37,6 +37,7 @@ const onNewGame = function (event) {
   $('.game-cell').removeClass('x')
   $('.game-cell').removeClass('o')
   $('.game-cell').empty()
+  $('.status').text('')
   gamePlay = true
   api.newGame()
     .then(ui.onNewGameSuccess)
@@ -70,48 +71,24 @@ const gameStatus = function () {
 
   if (zero && zero === one && zero === two) {
     handleWin(zero)
-    cells[0].classList.add('won')
-    cells[1].classList.add('won')
-    cells[2].classList.add('won')
   } else if (three && three === four && three === five) {
     handleWin(three)
-    cells[3].classList.add('won')
-    cells[4].classList.add('won')
-    cells[5].classList.add('won')
   } else if (six && six === seven && six === eight) {
     handleWin(six)
-    cells[6].classList.add('won')
-    cells[7].classList.add('won')
-    cells[8].classList.add('won')
   } else if (zero && zero === three && zero === six) {
     handleWin(zero)
-    cells[0].classList.add('won')
-    cells[3].classList.add('won')
-    cells[6].classList.add('won')
   } else if (one && one === four && one === seven) {
     handleWin(one)
-    cells[1].classList.add('won')
-    cells[4].classList.add('won')
-    cells[7].classList.add('won')
   } else if (two && two === five && two === eight) {
     handleWin(two)
-    cells[2].classList.add('won')
-    cells[5].classList.add('won')
-    cells[8].classList.add('won')
   } else if (zero && zero === four && zero === eight) {
     handleWin(zero)
-    cells[0].classList.add('won')
-    cells[4].classList.add('won')
-    cells[8].classList.add('won')
   } else if (two && two === four && two === six) {
     handleWin(two)
-    cells[2].classList.add('won')
-    cells[4].classList.add('won')
-    cells[6].classList.add('won')
   } else if (zero && one && two && three && four && five && six && seven && eight) {
     gamePlay = false
-    $('.status').text('It is a tie!')}
-  else {
+    $('.status').text('It is a tie!')
+  } else {
     xTurn = !xTurn
     if (xTurn) {
       $('.status').text('X is next')
@@ -131,13 +108,12 @@ const onCellClick = function (event) {
     return null
   }
   if (xTurn === true) {
-    cellStatus.add('x')
+    $(event.target).addClass('x')
     gameStatus()
     // xTurn = !xTurn
   } else {
-    cellStatus.add('o')
+    $(event.target).addClass('o')
     gameStatus()
-    // xTurn = !xTurn
   }
   $(event.target).text(cellStatus[1])
   store.cellIndex = $(event.target).data('cell-index')
@@ -147,12 +123,13 @@ const onCellClick = function (event) {
         index: store.cellIndex,
         value: cellStatus[1]
       },
-      over: false
+      over: !gamePlay
     }
   }
 
-
   api.cellClick(game)
+    .then(ui.onCellClickSuccess)
+    .catch(ui.onCellClickFailure)
 }
 
 let xTurn = true

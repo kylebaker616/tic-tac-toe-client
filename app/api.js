@@ -4,7 +4,7 @@ const { apiUrl } = require('./config')
 const signUp = function (data) {
   console.log(data)
   return $.ajax({
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-up',
+    url: apiUrl + '/sign-up',
     method: 'POST',
     data: data
   })
@@ -13,7 +13,7 @@ const signUp = function (data) {
 const signIn = function (data) {
   console.log(data)
   return $.ajax({
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-in',
+    url: apiUrl + '/sign-in',
     method: 'POST',
     data: data
   })
@@ -21,7 +21,7 @@ const signIn = function (data) {
 
 const signOut = function () {
   return $.ajax({
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-out',
+    url: apiUrl + '/sign-out',
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.token
@@ -30,7 +30,7 @@ const signOut = function () {
 }
 const newGame = function () {
   return $.ajax({
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/games',
+    url: apiUrl + '/games',
     method: 'POST',
     headers: {
       Authorization: 'Bearer ' + store.token
@@ -42,7 +42,7 @@ const cellClick = function (game) {
   console.log('in update api')
   console.log(game)
   return $.ajax({
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/games/' + store.id,
+    url: apiUrl + '/games/' + store.id,
     method: 'PATCH',
     headers: { Authorization: 'Bearer ' + store.token },
     data: game
