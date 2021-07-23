@@ -110,7 +110,6 @@ const onCellClick = function (event) {
   if (xTurn === true) {
     $(event.target).addClass('x')
     gameStatus()
-    // xTurn = !xTurn
   } else {
     $(event.target).addClass('o')
     gameStatus()
