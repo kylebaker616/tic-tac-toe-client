@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width initial-scale=1">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+      </style>
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Tic Tac Toe</h1>
+      <em>
+        <h1 id="message"></h1>
+      </em>
+      <h3 class="status"></h3>
+      <div id="login-forms">
+      <!-- <em>
+        <h1 id="message"></h1>
+      </em> -->
+
+      <!-- <h3 class="status"></h3> -->
+      <button class="new-game1 top-button"  type="button">
+        New Game
+      </button>
+      <button id="sign-out1" class="top-button" type="button">
+        Sign Out
+      </button>
+
+    </div>
+
+      <div class="container">
+              <div class="row" id="row1">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 ">
+                  <button class="game-cell" data-cell-index="0"></button></div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4  "><button  class="game-cell" data-cell-index="1"></button></div>
+                <div class="col-4"><button class="game-cell" data-cell-index="2"></button></div>
+              </div>
+              <div class="row" id="row2">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 "> <button  class="game-cell" data-cell-index="3"></button></div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 "><button class="game-cell" data-cell-index="4"></button></div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 "><button class="game-cell" data-cell-index="5"></button></div>
+              </div>
+              <div class="row" id="row3">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 "> <button class="game-cell" data-cell-index="6"></button></div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 "><button class="game-cell" data-cell-index="7"></button></div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 "><button class="game-cell" data-cell-index="8"></button></div>
+              </div>
+            </div>
+
+
+
+            <div class="form-modal">
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+              tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form id="sign-up1">
+                    <label for="sign-up-email">Email:</label>
+                    <br>
+                    <input type="email" name="credentials[email]" placeholder="Email">
+                    <br>
+                    <label>Password:</label>
+                    <br>
+                    <input type="password" name="credentials[password]" placeholder="password">
+                    <br>
+                    <label>Confirm Password:</label>
+                    <br>
+                    <input type="password" name="credentials[password_confirmation]" placeholder="password">
+                    <input type="submit" value="Sign Up">
+                  </form>
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <div><p class="modal-p">Already have an account?</p></div>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                      data-bs-dismiss="modal">Sign In</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+              tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Sign In </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="sign-in1">
+                      <label for="sign-in-email">Email:</label>
+                      <br>
+                      <input type="email" name="credentials[email]" placeholder="Email">
+                      <br>
+                      <label>Password:</label>
+                      <br>
+                      <input type="password" name="credentials[password]" placeholder="password">
+                      <input type="submit" value="Sign In">
+                    </form>
+                    <button class="new-game1" type="button">
+                      New Game
+                    </button>
+                  </div>
+                  <div class="modal-footer">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" id="button1" role="button">Play</a>
+          </div>
+
+    </body>
+</html>
