@@ -2,6 +2,7 @@
 const store = require('./store')
 const onSignUpSuccess = function (response) {
   console.log('in then')
+  $('#message').show()
   $('#message').text(`Thank you for signing up ${response.user.email}`)
   $('#sign-up1').trigger('reset')
 }
@@ -14,6 +15,7 @@ const onSignUpFailure = function (response) {
 const onSignInSuccess = function (response) {
   console.log('in then')
   $('#message').text(`Now signed in as ${response.user.email}`)
+  $('#message').show()
   store.token = response.user.token
   $('#sign-in1').trigger('reset')
   $('#sign-in1').hide()
@@ -22,6 +24,7 @@ const onSignInSuccess = function (response) {
   $('.new-game1').show()
   $('#sign-in-title').hide()
   $('#sign-up-title').hide()
+  $('.status').show()
   // $('#change-password').show()
 }
 
